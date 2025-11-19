@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .brand-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: #fd7e14;
+            width: min-content;
+            white-space: pre-line;
+        }
+        .navbar .nav-link {
+            color: #fd7e14 !important; 
+        }
+        .navbar .nav-link:hover {
+            color: #ff9900 !important;
+        }
+        .whatsapp-float {   
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #1C1C1C;">
+        <div class="container-fluid"> 
+
+            <a class="navbar-brand d-flex align-items-center gap-2 me-auto" >
+            <img src="images/logo.png" class="d-inline-block align-text-top" alt="Logo"
+             width="100" height="94">
+                <span class="brand-title fw-bold">Jhared Burger</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+             aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon-custom">
+                    <i class="fa-solid fa-burger" style="color: #fd7e14; font-size: 1.5rem; padding: 1rem;"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li nav-item>
+                        <a class="nav-link active fw-bold fs-5" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li nav-item>
+                        <a class="nav-link active fw-bold fs-5" href="#">Procutos</a>
+                    </li>
+                    <li nav-item>
+                        <a class="nav-link active fw-bold fs-5" href="#">Ubicanos</a>
+                    </li>
+                    <li nav-item>
+                        <a class="nav-link active fw-bold fs-5" href="#">Horario</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+
+        <a href="https://wa.me/51965727329?text=Hola%20Prueba%20de%20WhatsApp%20Business%20API"
+        class="whatsapp-float bg-success text-white rounded-circle p-3 shadow-lg fs-3" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Chatear por WhatsApp">
+            <i class="bi bi-whatsapp"></i> 
+        </a>        
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>
