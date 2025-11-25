@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhared Burger</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: grid;
+            width: 100%; 
+            height: 100vh;
+            grid-template-rows: auto 1fr; 
+            grid-template-columns: 1fr;
+        }
+        .grid-item{
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            padding: 0;
+        }
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+        nav {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px 20px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .img-logo {
+            width: 100px;
+            height: 94px;
+        }
+        .text-logo {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            font-size: 2rem;
+            color: orange;
+            font-weight: bold;
+            line-height: 1.1;
+        }
+        .menu-nav {
+            display: flex;
+            list-style-type: none;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        .nav-item {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.6rem;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 0.2s;
+            display: block;
+        }
+        .nav-item:hover {
+            background-color: orange;
+            color: black;
+        }
+        .nav-boton {
+            display: none;
+            background: none;
+            border: none;
+            color: orange;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .contenedor {
+            height: 100%;
+            background-color: #000;
+            padding: 0;
+        }
+        .hero-banner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            padding: 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+        .hero-text {
+            flex: 1; 
+            min-width: 300px; 
+            text-align: left;
+        }
+        .maestros-sabor {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 1px;
+        }
+        .parrilla-cilindro {
+            color: #ff8c00;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 2px;
+            display: block;
+        }
+        .subtitulo {
+            font-family: 'Oswald', sans-serif;
+            font-size:2rem;
+            margin: 10px 0 30px 0;
+            color: #ccc;
+        }
+        .menu-button {
+            display: inline-block;
+            background-color: #ff8c00;
+            color: #000;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            padding: 15px 40px;
+            margin-top: 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+        }
+        .menu-button:hover {
+            background-color: #ffa500;
+            transform: translateY(-3px);
+        }
+        .hero-image {
+            flex: 1; 
+            min-width: 300px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-image img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+        @media(max-width: 768px) {
+            .nav-boton {
+                display: block;
+            }
+            .menu-nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background-color: black;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .3s ease;
+                gap: 0;
+                width: 100%;
+            }
+            .menu-nav.active {
+                max-height: 300px;
+                padding: 10px 0;
+            }
+            .menu-nav li {
+                margin: 5px 0;
+            }
+            .hero-banner {
+                flex-direction: column;
+                padding: 80px 20px;
+            }
+            .hero-text {
+                padding: 0;
+                text-align: center;
+            }
+            .maestros-sabor {
+                font-size: 1.5rem;
+            }
+            .parrilla-cilindro {
+                font-size: 2rem;
+            }
+            .subtitulo {
+                font-size: 1rem;
+            }
+            .menu-button {
+                font-size: 24px;
+                margin-top: 0;
+                padding: 12px 30px;
+            }
+            .hero-image img {
+                width: 40%;
+                height: auto;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header class="grid-item">
+        <nav>
+            <a href="#" class="logo">
+                <img src="images/logo.png" class="img-logo" alt="Logo de Jhared Burger">
+                <span class="text-logo">Jhared<br>Burger</span>
+            </a>
+
+            <button class="nav-boton" aria-label="Toggle navigation menu">
+                <i class="fa-solid fa-burger"></i>
+            </button>
+
+            <ul class="menu-nav" id="menu-nav">
+                <li><a class="nav-item" href="#">Inicio</a></li>
+                <li><a class="nav-item" href="#menu">Ver Menu</a></li>
+                <li><a class="nav-item" href="#location">Ubícanos</a></li>
+            </ul>
+        </nav>        
+    </header>
+<main class="grid-item">
+        <div class="contenedor">
+            
+            <section class="hero-banner">
+                <div class="hero-text">
+                    <h2 class="maestros-sabor">MAESTROS EN LA FRITURA Y LA LEÑA</h2>
+                    <strong class="parrilla-cilindro">HAMBURGUESAS PARRILLA & BROASTER</strong>
+                    <p class="subtitulo">con el sabor que amas.</p>
+                    <a href="#menu" class="menu-button">Ver Menu</a>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hamburguesa.jpg" alt="Hamburguesa Jhared Burger">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const boton = document.querySelector('.nav-boton');
+        const menu = document.querySelector('#menu-nav');
+        const navItems = document.querySelectorAll('.menu-nav .nav-item');
+
+        const toggleMenu = () => {
+            menu.classList.toggle('active');
+        };
+
+        const closeMenu = () => {
+            menu.classList.remove('active');
+        };
+
+        boton.addEventListener('click', toggleMenu);
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (menu.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>
